@@ -1,0 +1,73 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    background-color: rgb(100, 99, 99);
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.conteiner {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+    background-color: black;
+    color: white;
+}
+
+.header h1 {
+    text-transform: uppercase;
+    border-bottom: 2px solid white;
+}
+
+.cartaz {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.cartaz div {
+    flex-basis: 200px;
+    margin: 10px;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.box {
+    flex-basis: calc(50% - 20px);
+    padding: 10px;
+}
+
+.box h2 {
+    border-bottom: 2px solid black;
+}
+
+.footer {
+    padding: 20px;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+p {
+    text-align: justify;
+}
+
+@media only screen and (max-width: 500px) {
+    .box {
+        flex-basis: 100%;
+    }
+}
