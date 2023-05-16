@@ -1,82 +1,158 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>PobreFlix</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&family=Rajdhani&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-    <title>Astronomia</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Rajdhani&family=Roboto&display=swap"
-        rel="stylesheet">
-</head>
-
-<body>
+  <body>
     <div class="conteiner">
-        <div class="header">
-            <h1>Filmes e Séries</h1>
-            <span> Acompanhe todos os Lançamentos </span>
+      <div class="header">
+        <div id="logo">Pobre<span>Flix </span></div>
+        <div class="nav-toggle">
+          <input type="checkbox" id="btt_menu" />
+          <label for="btt_menu">&#9776;</label>
         </div>
 
-        <br>
-
-        <div class="cartaz">
-            <div>
-                <img src="imagens/imagem1.png">
-            </div>
-
-            <div>
-                <img src="imagens/imagem2.png">
-            </div>
-
-            <div>
-                <img src="imagens/imagem3.png">
-            </div>
-
-            <div>
-                <img src="imagens/imagem4.png">
-            </div>
-
-            <div>
-                <img src="imagens/imagem5.png">
-            </div>
-
-            <div>
-                <img src="imagens/imagem6.png">
-            </div>
+        <div class="nav">
+          <ul class="menu">
+            <li>
+              <div class="dropdown">
+                <button class="drop_button" onclick="toggleDropdown(this)">
+                  Filmes
+                </button>
+                <div class="drop_content">
+                  <a href="">Categorias</a>
+                  <a href="">Mais Assistidos</a>
+                  <a href="">Em Breve</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="dropdown">
+                <button class="drop_button" onclick="toggleDropdown(this)">
+                  Séries
+                </button>
+                <div class="drop_content">
+                  <a href="">Categorias</a>
+                  <a href="">Mais Assistidos</a>
+                  <a href="">Em Breve</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="dropdown">
+                <button class="drop_button" onclick="toggleDropdown(this)">
+                  Lançamentos
+                </button>
+                <div class="drop_content">
+                  <a href="">Categorias</a>
+                  <a href="">Mais Assistidos</a>
+                  <a href="">Em Breve</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+          <ul class="mobile-menu">
+            <li>
+              <a href="">Filmes</a>
+            </li>
+            <li>
+              <a href="">Séries</a>
+            </li>
+            <li>
+              <a href="">Lançamentos</a>
+            </li>
+          </ul>
         </div>
 
+        <h2>SUGESTÕES PARA VOCÊ</h2>
+      </div>
 
-        <div class="content">
-            <div class="box">
-                <h2>Subtítulo</h2>
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe delectus enim sint architecto cum
-                    aliquam magnam, nisi corrupti ut, inventore unde cupiditate eius assumenda repellat quod labore ad
-                    sed iste?
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam officiis iure illum facere
-                    placeat eligendi consectetur laudantium? Aliquam minus consequuntur, nesciunt tempore quas numquam
-                    velit veritatis, dolor, facilis totam exercitationem!
-                </p>
-            </div>
+      <br />
 
-            <div class="box">
-                <h2>Subtítulo</h2>
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe delectus enim sint architecto cum
-                    aliquam magnam, nisi corrupti ut, inventore unde cupiditate eius assumenda repellat quod labore ad
-                    sed iste?
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam officiis iure illum facere
-                    placeat eligendi consectetur laudantium? Aliquam minus consequuntur, nesciunt tempore
-                </p>
-            </div>
+      <div class="cartaz">
+        <div>
+          <img class="zoom-img" src="imagens/imagem1.png" />
         </div>
 
-        <div class="footer">
-            <span> Desenvolvido por Christian - 2023 </span>
+        <div>
+          <img  class="zoom-img" src="imagens/imagem2.png" />
         </div>
+
+        <div>
+          <img class="zoom-img" src="imagens/imagem3.png" />
+        </div>
+
+        <div>
+          <img class="zoom-img" src="imagens/imagem4.png" />
+        </div>
+
+        <div>
+          <img class="zoom-img" src="imagens/imagem5.png" />
+        </div>
+
+        <div>
+          <img class="zoom-img" src="imagens/imagem6.png" />
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="box">
+          <h2>Subtítulo</h2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe
+            delectus enim sint architecto cum aliquam magnam, nisi corrupti ut,
+            inventore unde cupiditate eius assumenda repellat quod labore ad sed
+            iste? Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Laboriosam officiis iure illum facere placeat eligendi consectetur
+            laudantium? Aliquam minus consequuntur, nesciunt tempore quas
+            numquam velit veritatis, dolor, facilis totam exercitationem!
+          </p>
+        </div>
+
+        <div class="box">
+          <h2>Subtítulo</h2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe
+            delectus enim sint architecto cum aliquam magnam, nisi corrupti ut,
+            inventore unde cupiditate eius assumenda repellat quod labore ad sed
+            iste? Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Laboriosam officiis iure illum facere placeat eligendi consectetur
+            laudantium? Aliquam minus consequuntur, nesciunt tempore
+          </p>
+        </div>
+      </div>
+
+      <div class="footer">
+        <span> Desenvolvido por Christian - 2023 </span>
+      </div>
     </div>
-</body>
 
+    <script>
+
+  function toggleMenu() {
+    var width = window.innerWidth || document.documentElement.clientWidth;
+    var menu = document.querySelector(".menu");
+    var mobileMenu = document.querySelector(".mobile-menu");
+    var hamburger = document.querySelector(".hamburger");
+
+    if (width <= 420) {
+      mobileMenu.classList.toggle("active");
+      hamburger.classList.toggle("active");
+    } else {
+      menu.classList.toggle("active");
+    }
+  }
+    </script>
+  </body>
 </html>
