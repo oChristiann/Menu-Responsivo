@@ -223,7 +223,7 @@ p {
 .zoom-img {
   width: 200px;
   transition: transform 0.3s ease;
-  border: 3px solid #f70000; /* Adicione esta linha */
+  border: 3px solid #f70000; 
 }
 
 /* Aplica o efeito de zoom ao passar o mouse */
